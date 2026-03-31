@@ -352,20 +352,6 @@ async function alertOwner({ message }) {
     return { success: false, error: `Telegram error: ${textRes.status}` };
   }
 
-  // Send proposal PDF if available
-  if (proposalPdfBase64) {
-    const pdfBuffer = Buffer.from(proposalPdfBase64, 'base64');
-    const formData = new FormData();
-    formData.append('chat_id', chatId);
-    formData.append('document', new Blob([pdfBuffer], { type: 'application/pdf' }), 'proposal.pdf');
-    formData.append('caption', 'Proposal PDF attached');
-
-    await fetch(`https://api.telegram.org/bot${botToken}/sendDocument`, {
-      method: 'POST',
-      body: formData,
-    });
-  }
-
   return { success: true };
 }
 
