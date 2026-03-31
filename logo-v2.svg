@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 64" fill="none" color="#1A1007" role="img" aria-label="Samik Das · Coach">
+  <title>Samik Das · Coach</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&amp;family=Jost:wght@300&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- ── NAME: italic serif, terracotta dot separator ── -->
+  <text
+    x="0" y="36"
+    font-family="'Cormorant Garamond', Palatino, 'Book Antiqua', Georgia, serif"
+    font-size="38" font-weight="300" font-style="italic" letter-spacing="0.5">
+    <tspan fill="currentColor">Samik </tspan><tspan fill="#B56840">&middot;</tspan><tspan fill="currentColor"> Das</tspan>
+  </text>
+
+  <!-- ── RULE ── -->
+  <line x1="1" y1="45" x2="209" y2="45" stroke="#B56840" stroke-width="0.75"/>
+
+  <!-- ── SUBTITLE ── -->
+  <text
+    x="2" y="58"
+    font-family="'Jost', 'Gill Sans', Optima, Tahoma, sans-serif"
+    font-size="8" font-weight="300" letter-spacing="7"
+    fill="currentColor" opacity="0.55">COACH</text>
+</svg>

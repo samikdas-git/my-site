@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 44" fill="none" color="#1A1007" role="img" aria-label="Samik Das · Coach">
+  <title>Samik Das · Coach</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&amp;family=Jost:wght@400&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- ── MARK: rising path (transition from one state to another) ── -->
+  <circle cx="5"  cy="38" r="2.6" fill="#B56840"/>
+  <path   d="M 5 38 C 8 26 20 20 31 6"
+          stroke="#B56840" stroke-width="1.7" stroke-linecap="round"/>
+  <circle cx="31" cy="6"  r="2.6" fill="#B56840"/>
+
+  <!-- ── SEPARATOR ── -->
+  <line x1="46" y1="8" x2="46" y2="36"
+        stroke="#B56840" stroke-width="0.7" stroke-linecap="round" opacity="0.35"/>
+
+  <!-- ── WORDMARK ── -->
+  <text
+    x="56" y="27"
+    font-family="'Cormorant Garamond', Palatino, 'Book Antiqua', Georgia, serif"
+    font-size="21" font-weight="300" letter-spacing="2.5"
+    fill="currentColor">SAMIK DAS</text>
+
+  <text
+    x="57" y="38"
+    font-family="'Jost', 'Gill Sans', Optima, Tahoma, sans-serif"
+    font-size="7.5" font-weight="400" letter-spacing="4.5"
+    fill="#B56840">COACH</text>
+</svg>

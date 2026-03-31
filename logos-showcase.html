@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Options — Samik Das · Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:        #F3EBD6;
+            --bg-alt:    #EAE0C6;
+            --bg-dark:   #1D1108;
+            --text:      #1A1007;
+            --text-mid:  #5A3C22;
+            --text-muted:#9A7C5A;
+            --accent:    #B56840;
+            --off-white: #FAF4E6;
+            --rule:      #D4C2A2;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { font-size: 16px; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            padding: 4rem 2rem 6rem;
+            min-height: 100vh;
+        }
+
+        /* Page header */
+        .page-header {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 2rem;
+        }
+        .page-header .label {
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+        .page-header h1 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--text);
+        }
+        .page-header p {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 0.04em;
+        }
+
+        /* Grid layout */
+        .grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        /* Each logo section */
+        .logo-section { display: flex; flex-direction: column; gap: 1rem; }
+
+        .logo-label {
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+        .logo-label strong {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* Panel pair */
+        .panel-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            border: 1px solid var(--rule);
+        }
+
+        /* Individual panel */
+        .panel {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 3rem 3rem 2.5rem;
+            min-height: 160px;
+            gap: 2rem;
+        }
+        .panel.light {
+            background: #FFFFFF;
+            color: var(--text);
+        }
+        .panel.parchment {
+            background: var(--bg);
+            color: var(--text);
+        }
+        .panel.dark {
+            background: var(--bg-dark);
+            color: var(--off-white);
+        }
+        .panel-bg-label {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.4;
+            margin-top: auto;
+        }
+        .panel.dark .panel-bg-label { color: var(--off-white); }
+        .panel.light .panel-bg-label,
+        .panel.parchment .panel-bg-label { color: var(--text); }
+
+        /* SVG sizing */
+        .panel svg {
+            max-width: 240px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Divider between sections */
+        .section-divider {
+            border: none;
+            border-top: 1px solid var(--rule);
+            margin: 0.5rem 0;
+        }
+
+        /* Note at bottom */
+        .note {
+            max-width: 900px;
+            margin: 3rem auto 0;
+            padding: 1.5rem;
+            background: var(--bg-alt);
+            border-left: 2px solid var(--accent);
+        }
+        .note p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            letter-spacing: 0.02em;
+        }
+        .note p + p { margin-top: 0.5rem; }
+
+        @media (max-width: 600px) {
+            body { padding: 2rem 1rem 4rem; }
+            .panel-pair { grid-template-columns: 1fr; }
+            .panel { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="page-header">
+    <span class="label">Brand Identity</span>
+    <h1>Logo Options — Samik Das &middot; Coach</h1>
+    <p>Both logos shown on white and dark backgrounds. Colors: terracotta #B56840 · dark brown #1A1007 · off-white #FAF4E6</p>
+</header>
+
+<div class="grid">
+
+    <!-- ═══ LOGO 1 ═══ -->
+    <div class="logo-section">
+        <p class="logo-label"><strong>Logo 1</strong> &nbsp;&middot;&nbsp; Mark + Wordmark</p>
+        <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;max-width:600px;">
+            A minimal rising-arc mark (representing a transition from one state to another) paired with the name in spaced serif caps and a terracotta subtitle. Works well as a favicon and at small sizes.
+        </p>
+        <div class="panel-pair">
+            <div class="panel light" style="color: #1A1007;">
+                <!-- LOGO 1: INLINE SVG — light background -->
+                <svg viewBox="0 0 210 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Samik Das Coach logo">
+                    <circle cx="5"  cy="38" r="2.6" fill="#B56840"/>
+                    <path   d="M 5 38 C 8 26 20 20 31 6" stroke="#B56840" stroke-width="1.7" stroke-linecap="round"/>
+                    <circle cx="31" cy="6"  r="2.6" fill="#B56840"/>
+                    <line x1="46" y1="8" x2="46" y2="36" stroke="#B56840" stroke-width="0.7" stroke-linecap="round" opacity="0.35"/>
+                    <text x="56" y="27"
+                        font-family="'Cormorant Garamond', Palatino, 'Book Antiqua', Georgia, serif"
+                        font-size="21" font-weight="300" letter-spacing="2.5"
+                        fill="currentColor">SAMIK DAS</text>
+                    <text x="57" y="38"
+                        font-family="'Jost', 'Gill Sans', Optima, Tahoma, sans-serif"
+                        font-size="7.5" font-weight="400" letter-spacing="4.5"
+                        fill="#B56840">COACH</text>
+                </svg>
+                <span class="panel-bg-label">White background</span>
+            </div>
+            <div class="panel dark" style="color: #FAF4E6;">
+                <!-- LOGO 1: INLINE SVG — dark background -->
+                <svg viewBox="0 0 210 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Samik Das Coach logo">
+                    <circle cx="5"  cy="38" r="2.6" fill="#B56840"/>
+                    <path   d="M 5 38 C 8 26 20 20 31 6" stroke="#B56840" stroke-width="1.7" stroke-linecap="round"/>
+                    <circle cx="31" cy="6"  r="2.6" fill="#B56840"/>
+                    <line x1="46" y1="8" x2="46" y2="36" stroke="#B56840" stroke-width="0.7" stroke-linecap="round" opacity="0.35"/>
+                    <text x="56" y="27"
+                        font-family="'Cormorant Garamond', Palatino, 'Book Antiqua', Georgia, serif"
+                        font-size="21" font-weight="300" letter-spacing="2.5"
+                        fill="currentColor">SAMIK DAS</text>
+                    <text x="57" y="38"
+                        font-family="'Jost', 'Gill Sans', Optima, Tahoma, sans-serif"
+                        font-size="7.5" font-weight="400" letter-spacing="4.5"
+                        fill="#B56840">COACH</text>
+                </svg>
+                <span class="panel-bg-label">Dark background</span>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ═══ LOGO 2 ═══ -->
+    <div class="logo-section">
+        <p class="logo-label"><strong>Logo 2</strong> &nbsp;&middot;&nbsp; Typographic</p>
+        <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;max-width:600px;">
+            The name in italic Cormorant Garamond with a terracotta mid-dot separator (matching the website nav), a thin rule, and a spaced subtitle. No icon — the letterforms carry the brand. Distinctive on letterheads, proposals, and web.
+        </p>
+        <div class="panel-pair">
+            <div class="panel light" style="color: #1A1007;">
+                <!-- LOGO 2: INLINE SVG — light background -->
+                <svg viewBox="0 0 210 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Samik Das Coach logo">
+                    <text x="0" y="36"
+                        font-family="'Cormorant Garamond', Palatino, 'Book Antiqua', Georgia, serif"
+                        font-size="38" font-weight="300" font-style="italic" letter-spacing="0.5">
+                        <tspan fill="currentColor">Samik </tspan><tspan fill="#B56840">&middot;</tspan><tspan fill="currentColor"> Das</tspan>
+                    </text>
+                    <line x1="1" y1="45" x2="209" y2="45" stroke="#B56840" stroke-width="0.75"/>
+                    <text x="2" y="58"
+                        font-family="'Jost', 'Gill Sans', Optima, Tahoma, sans-serif"
+                        font-size="8" font-weight="300" letter-spacing="7"
+                        fill="currentColor" opacity="0.55">COACH</text>
+                </svg>
+                <span class="panel-bg-label">White background</span>
+            </div>
+            <div class="panel dark" style="color: #FAF4E6;">
+                <!-- LOGO 2: INLINE SVG — dark background -->
+                <svg viewBox="0 0 210 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Samik Das Coach logo">
+                    <text x="0" y="36"
+                        font-family="'Cormorant Garamond', Palatino, 'Book Antiqua', Georgia, serif"
+                        font-size="38" font-weight="300" font-style="italic" letter-spacing="0.5">
+                        <tspan fill="currentColor">Samik </tspan><tspan fill="#B56840">&middot;</tspan><tspan fill="currentColor"> Das</tspan>
+                    </text>
+                    <line x1="1" y1="45" x2="209" y2="45" stroke="#B56840" stroke-width="0.75"/>
+                    <text x="2" y="58"
+                        font-family="'Jost', 'Gill Sans', Optima, Tahoma, sans-serif"
+                        font-size="8" font-weight="300" letter-spacing="7"
+                        fill="currentColor" opacity="0.55">COACH</text>
+                </svg>
+                <span class="panel-bg-label">Dark background</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ BOTH ON PARCHMENT (website context) ═══ -->
+    <hr class="section-divider">
+
+    <div class="logo-section">
+        <p class="logo-label"><strong>Website context</strong> &nbsp;&middot;&nbsp; Both logos on parchment</p>
+        <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;max-width:600px;">
+            How each logo would appear in the navigation bar of the website.
+        </p>
+        <div class="panel-pair">
+            <div class="panel parchment" style="color: #1A1007;">
+                <svg viewBox="0 0 210 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="5"  cy="38" r="2.6" fill="#B56840"/>
+                    <path   d="M 5 38 C 8 26 20 20 31 6" stroke="#B56840" stroke-width="1.7" stroke-linecap="round"/>
+                    <circle cx="31" cy="6"  r="2.6" fill="#B56840"/>
+                    <line x1="46" y1="8" x2="46" y2="36" stroke="#B56840" stroke-width="0.7" stroke-linecap="round" opacity="0.35"/>
+                    <text x="56" y="27"
+                        font-family="'Cormorant Garamond', Palatino, Georgia, serif"
+                        font-size="21" font-weight="300" letter-spacing="2.5" fill="currentColor">SAMIK DAS</text>
+                    <text x="57" y="38"
+                        font-family="'Jost', system-ui, sans-serif"
+                        font-size="7.5" font-weight="400" letter-spacing="4.5" fill="#B56840">COACH</text>
+                </svg>
+                <span class="panel-bg-label">Logo 1 · Parchment (#F3EBD6)</span>
+            </div>
+            <div class="panel parchment" style="color: #1A1007;">
+                <svg viewBox="0 0 210 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="36"
+                        font-family="'Cormorant Garamond', Palatino, Georgia, serif"
+                        font-size="38" font-weight="300" font-style="italic" letter-spacing="0.5">
+                        <tspan fill="currentColor">Samik </tspan><tspan fill="#B56840">&middot;</tspan><tspan fill="currentColor"> Das</tspan>
+                    </text>
+                    <line x1="1" y1="45" x2="209" y2="45" stroke="#B56840" stroke-width="0.75"/>
+                    <text x="2" y="58"
+                        font-family="'Jost', system-ui, sans-serif"
+                        font-size="8" font-weight="300" letter-spacing="7" fill="currentColor" opacity="0.55">COACH</text>
+                </svg>
+                <span class="panel-bg-label">Logo 2 · Parchment (#F3EBD6)</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="note">
+    <p><strong style="color:var(--accent);font-weight:500;">To use in the website:</strong> Replace the text-based nav logo in index.html with whichever SVG you prefer. For production, convert text to paths in Figma or Inkscape to eliminate font dependency.</p>
+    <p>SVG files are in <code style="font-family:monospace;font-size:0.85em;">my-site/logo-v1.svg</code> and <code style="font-family:monospace;font-size:0.85em;">my-site/logo-v2.svg</code>. Both use <code style="font-family:monospace;font-size:0.85em;">currentColor</code> for text so they adapt to any background.</p>
+</div>
+
+</body>
+</html>

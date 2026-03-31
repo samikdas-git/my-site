@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Executive coach helping senior professionals transition out of corporate careers — with financial rigour, identity clarity, and a concrete plan.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Transitioning out of Corporate — Samik Das · Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── TCC page — supplemental styles ── */
+
+        /* Hero variant — no photo, full-width copy */
+        #tcc-hero {
+            min-height: 85svh;
+            display: flex;
+            align-items: center;
+            padding: 9rem 0 6rem;
+            background: var(--bg);
+        }
+        .tcc-hero-inner {
+            width: 100%;
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 0 var(--gutter);
+            max-width: 740px;
+        }
+        .tcc-hero-inner .eyebrow { margin-bottom: 1.5rem; }
+        .tcc-hero-inner h1 {
+            font-family: var(--f-display);
+            font-size: clamp(2.4rem, 4.5vw, 4rem);
+            font-weight: 300;
+            line-height: 1.12;
+            color: var(--text);
+            margin-bottom: 2rem;
+        }
+        .tcc-hero-inner h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+        .tcc-hero-body {
+            color: var(--text-mid);
+            font-size: 1.0625rem;
+            line-height: 1.88;
+            max-width: 580px;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Challenge section */
+        #challenge { background: var(--bg-alt); }
+
+        .challenge-header {
+            max-width: 580px;
+            margin-bottom: 3.5rem;
+        }
+        .challenge-header .section-title { margin-bottom: 0; }
+
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            border-top: 1px solid var(--rule);
+            padding-top: 2.5rem;
+        }
+        .challenge-item { }
+        .challenge-item .challenge-num {
+            font-family: var(--f-display);
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--rule);
+            line-height: 1;
+            margin-bottom: 1.25rem;
+            display: block;
+        }
+        .challenge-item h3 {
+            font-family: var(--f-display);
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+            line-height: 1.25;
+        }
+        .challenge-item p {
+            font-size: 0.95rem;
+            color: var(--text-mid);
+            line-height: 1.78;
+        }
+
+        /* Stages section */
+        #stages { background: var(--bg); }
+
+        .stages-header {
+            max-width: 580px;
+            margin-bottom: 1.5rem;
+        }
+        .stages-intro {
+            color: var(--text-mid);
+            font-size: 1rem;
+            line-height: 1.82;
+            max-width: 620px;
+            margin-bottom: 3rem;
+        }
+
+        .stages-list { border-top: 1px solid var(--rule); }
+
+        .stage-row {
+            display: grid;
+            grid-template-columns: 58px 1fr;
+            gap: 2rem;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid var(--rule);
+            align-items: start;
+        }
+        .stage-num {
+            font-family: var(--f-display);
+            font-size: 1.75rem;
+            font-weight: 300;
+            color: var(--rule);
+            line-height: 1.4;
+            padding-top: 0.05rem;
+        }
+        .stage-body { }
+        .stage-body .stage-label {
+            display: block;
+            font-family: var(--f-label);
+            font-size: 0.65rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .stage-body h3 {
+            font-family: var(--f-display);
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.65rem;
+            line-height: 1.25;
+        }
+        .stage-body p {
+            font-size: 0.95rem;
+            color: var(--text-mid);
+            line-height: 1.78;
+            max-width: 660px;
+        }
+        .stage-output {
+            display: inline-block;
+            margin-top: 1rem;
+            font-family: var(--f-label);
+            font-size: 0.68rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            border-top: 1px solid var(--rule);
+            padding-top: 0.65rem;
+        }
+        .stage-output strong {
+            color: var(--text-mid);
+            font-weight: 500;
+        }
+
+        /* Lead magnet section */
+        #lead-magnet {
+            background: var(--bg-dark);
+            padding: var(--sec-pad) 0;
+        }
+        .lead-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 0 var(--gutter);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: start;
+        }
+        .lead-left { }
+        .lead-left .eyebrow { color: var(--accent); }
+        .lead-left .section-title {
+            color: rgba(243, 235, 214, 0.92);
+            margin-bottom: 1.25rem;
+        }
+        .lead-left p {
+            color: rgba(243, 235, 214, 0.58);
+            font-size: 1rem;
+            line-height: 1.82;
+        }
+
+        .lead-right { }
+
+        /* Dark form variants */
+        #lead-magnet .form-group { margin-bottom: 1.4rem; }
+        #lead-magnet label {
+            color: rgba(243, 235, 214, 0.45);
+        }
+        #lead-magnet input {
+            background: rgba(243, 235, 214, 0.06);
+            border-color: rgba(243, 235, 214, 0.15);
+            color: rgba(243, 235, 214, 0.9);
+        }
+        #lead-magnet input::placeholder {
+            color: rgba(243, 235, 214, 0.25);
+        }
+        #lead-magnet input:focus {
+            border-color: var(--accent);
+            background: rgba(243, 235, 214, 0.1);
+        }
+        #lead-magnet .btn-submit { margin-top: 0.5rem; }
+
+        .pdf-download-wrap {
+            display: none;
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            border: 1px solid rgba(181, 104, 64, 0.4);
+            background: rgba(181, 104, 64, 0.08);
+        }
+        .pdf-download-wrap p {
+            color: rgba(243, 235, 214, 0.75);
+            font-size: 0.9rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.65;
+        }
+        .pdf-download-wrap.visible { display: block; }
+
+        /* Closing CTA */
+        #tcc-cta { background: var(--bg-alt); text-align: center; }
+        .tcc-cta-inner { max-width: 580px; margin: 0 auto; }
+        .tcc-cta-inner .section-title { margin-bottom: 1.25rem; }
+        .tcc-cta-body {
+            color: var(--text-mid);
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
+            line-height: 1.82;
+        }
+
+        /* Responsive */
+        @media (max-width: 960px) {
+            .challenge-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .lead-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+        @media (max-width: 700px) {
+            #tcc-hero { padding: 8rem 0 4.5rem; min-height: auto; }
+            .stage-row { grid-template-columns: 40px 1fr; gap: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Samik Das · Coach — Home">
+            <svg class="nav-logo-svg" viewBox="0 0 210 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="5"  cy="38" r="2.6" fill="#B56840"/>
+                <path d="M 5 38 C 8 26 20 20 31 6" stroke="#B56840" stroke-width="1.7" stroke-linecap="round"/>
+                <circle cx="31" cy="6"  r="2.6" fill="#B56840"/>
+                <line x1="46" y1="8" x2="46" y2="36" stroke="#B56840" stroke-width="0.7" stroke-linecap="round" opacity="0.35"/>
+                <text x="56" y="27"
+                    font-family="'Cormorant Garamond', Palatino, 'Book Antiqua', Georgia, serif"
+                    font-size="21" font-weight="300" letter-spacing="2.5"
+                    fill="currentColor">SAMIK DAS</text>
+                <text x="57" y="38"
+                    font-family="'Jost', 'Gill Sans', Optima, Tahoma, sans-serif"
+                    font-size="7.5" font-weight="400" letter-spacing="4.5"
+                    fill="#B56840">COACH</text>
+            </svg>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">What I Do</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li>
+                <a href="https://calendar.app.google/rNhsNvWVdP2TT2Ls6"
+                   target="_blank" rel="noopener"
+                   class="nav-cta">Book a Call</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="tcc-hero">
+    <div class="tcc-hero-inner">
+        <p class="eyebrow reveal">Transitioning out of Corporate Career</p>
+        <h1 class="reveal r-d1">
+            The decision to leave<br>
+            is not the hard part.<br>
+            <em>Knowing how to leave well is.</em>
+        </h1>
+        <p class="tcc-hero-body reveal r-d2">
+            We have built careers that most people would envy. And yet, at some point, the question surfaces:
+            is this what the next twenty years look like? That question deserves more than a motivational answer.
+            It deserves a plan.
+        </p>
+        <div class="hero-ctas reveal r-d3">
+            <a href="https://calendar.app.google/rNhsNvWVdP2TT2Ls6"
+               target="_blank" rel="noopener"
+               class="btn-primary">Book a Discovery Call</a>
+            <a href="#lead-magnet" class="btn-ghost">Download the Principles</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ THE CHALLENGE ═══ -->
+<section id="challenge">
+    <div class="section-inner">
+        <div class="challenge-header scroll-reveal">
+            <p class="eyebrow">What Makes This Hard</p>
+            <h2 class="section-title">Three things make a corporate<br>transition succeed or fail.</h2>
+        </div>
+        <div class="challenge-grid">
+            <div class="challenge-item scroll-reveal">
+                <span class="challenge-num">01</span>
+                <h3>Financial confidence</h3>
+                <p>Without a clear, honest picture of what we need and what we have, every other decision is built on uncertainty. The numbers come first.</p>
+            </div>
+            <div class="challenge-item scroll-reveal">
+                <span class="challenge-num">02</span>
+                <h3>Identity</h3>
+                <p>For most of us, two decades of corporate life has fused who we are with what we do. Separating those two things is not easy. And it cannot be skipped.</p>
+            </div>
+            <div class="challenge-item scroll-reveal">
+                <span class="challenge-num">03</span>
+                <h3>The plan</h3>
+                <p>Not a vague aspiration but a concrete roadmap: what we are building, by when, and how. Ambition without structure dissolves.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ THREE STAGES ═══ -->
+<section id="stages">
+    <div class="section-inner">
+        <div class="stages-header scroll-reveal">
+            <p class="eyebrow">How I Work</p>
+            <h2 class="section-title">A structured approach<br>to an unstructured problem.</h2>
+        </div>
+        <p class="stages-intro scroll-reveal">
+            Every transition is different. The pace, the priorities, and the decisions depend on the person.
+            But the work follows a proven structure. Not every engagement covers all three stages.
+            We start where it makes sense to start.
+        </p>
+        <div class="stages-list">
+            <div class="stage-row scroll-reveal">
+                <span class="stage-num">01</span>
+                <div class="stage-body">
+                    <span class="stage-label">Stage One</span>
+                    <h3>Am I ready to exit?</h3>
+                    <p>We examine financial confidence, future clarity, venture selection, and high-level plans. The hard questions get asked before the decision is made, not after.</p>
+                    <span class="stage-output"><strong>Output:</strong> A Go / No-Go decision, grounded in reality rather than optimism.</span>
+                </div>
+            </div>
+            <div class="stage-row scroll-reveal">
+                <span class="stage-num">02</span>
+                <div class="stage-body">
+                    <span class="stage-label">Stage Two</span>
+                    <h3>The Strategy Blueprint</h3>
+                    <p>Once the decision is made, we build the plan. New business strategy, upskilling and networking roadmap, and a life plan that goes beyond the professional.</p>
+                    <span class="stage-output"><strong>Output:</strong> A blueprint we can actually execute.</span>
+                </div>
+            </div>
+            <div class="stage-row scroll-reveal">
+                <span class="stage-num">03</span>
+                <div class="stage-body">
+                    <span class="stage-label">Stage Three</span>
+                    <h3>Resilient Execution Partnership</h3>
+                    <p>The most dangerous phase is the first year after the exit. We provide ongoing brainstorming, execution accountability, and the psychological resilience work that keeps the transition on track.</p>
+                    <span class="stage-output"><strong>Outcome:</strong> A successfully launched new life, without losing your sanity in the process.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ LEAD MAGNET ═══ -->
+<section id="lead-magnet">
+    <div class="lead-inner">
+
+        <div class="lead-left scroll-reveal">
+            <p class="eyebrow">Free Resource</p>
+            <h2 class="section-title">Principles of Transitioning<br>out of a Corporate Career.</h2>
+            <p>
+                A concise guide to the mental models and frameworks that underpin a successful corporate transition.
+                Written from the practice, not from theory.
+            </p>
+        </div>
+
+        <div class="lead-right scroll-reveal">
+            <form id="leadForm" novalidate>
+                <div class="form-group">
+                    <label for="lname">Your Name</label>
+                    <input type="text" id="lname" name="name"
+                           autocomplete="name" placeholder="Full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lemail">Email Address</label>
+                    <input type="email" id="lemail" name="email"
+                           autocomplete="email" placeholder="your@email.com" required>
+                </div>
+                <button type="submit" class="btn-submit">Send Me the PDF</button>
+                <p class="form-status" id="leadStatus" aria-live="polite"></p>
+            </form>
+
+            <div class="pdf-download-wrap" id="pdfDownloadWrap">
+                <p>
+                    The PDF is on its way. And if you want to think through your specific
+                    situation, a discovery call is a good place to start.
+                </p>
+                <a href="principles-corporate-transition.pdf"
+                   download="Principles of Transitioning out of a Corporate Career — Samik Das.pdf"
+                   class="btn-primary"
+                   id="pdfDownloadBtn">Download the PDF</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ═══ CLOSING CTA ═══ -->
+<section id="tcc-cta">
+    <div class="section-inner">
+        <div class="tcc-cta-inner scroll-reveal">
+            <p class="eyebrow">Ready to Think This Through?</p>
+            <h2 class="section-title">The best transitions are planned,<br>not happened into.</h2>
+            <p class="tcc-cta-body">
+                A discovery call is 30 minutes. We talk through where you are and what you are working with.
+                No pitch. If there is a fit, we take the next step together.
+            </p>
+            <a href="https://calendar.app.google/rNhsNvWVdP2TT2Ls6"
+               target="_blank" rel="noopener"
+               class="btn-primary">Book a Discovery Call</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+    <div class="footer-inner">
+        <span class="footer-logo">Samik Das &nbsp;&middot;&nbsp; Coach</span>
+        <span class="footer-copy">&copy; 2026 Samik Das. All rights reserved.</span>
+    </div>
+</footer>
+
+<script>
+(function () {
+    'use strict';
+
+    /* ── Nav scroll state ──────────────────────────── */
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function () {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    /* ── Mobile nav toggle ─────────────────────────── */
+    var navToggle = document.getElementById('navToggle');
+    var navLinks  = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', function () {
+        var open = navLinks.classList.toggle('open');
+        navToggle.classList.toggle('active', open);
+        navToggle.setAttribute('aria-expanded', String(open));
+        document.body.classList.toggle('nav-open', open);
+    });
+
+    navLinks.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+            navLinks.classList.remove('open');
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('nav-open');
+        });
+    });
+
+    /* ── Hero entrance on load ─────────────────────── */
+    window.addEventListener('load', function () {
+        document.querySelectorAll('#tcc-hero .reveal').forEach(function (el) {
+            el.classList.add('visible');
+        });
+    });
+
+    /* ── Scroll reveal ─────────────────────────────── */
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                io.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.scroll-reveal').forEach(function (el) {
+        io.observe(el);
+    });
+
+    /* ── Lead magnet form ──────────────────────────── */
+    var leadForm       = document.getElementById('leadForm');
+    var leadStatus     = document.getElementById('leadStatus');
+    var pdfWrap        = document.getElementById('pdfDownloadWrap');
+    var pdfBtn         = document.getElementById('pdfDownloadBtn');
+
+    /*
+        SETUP: To capture emails, sign up at formspree.io, create a form,
+        and replace REPLACE_WITH_LEAD_FORM_ID below with your form ID.
+        The PDF download works immediately without this step.
+    */
+    var FORMSPREE_ID = 'REPLACE_WITH_LEAD_FORM_ID';
+
+    function showDownload() {
+        leadForm.style.display = 'none';
+        pdfWrap.classList.add('visible');
+        /* Auto-trigger download */
+        pdfBtn.click();
+    }
+
+    if (leadForm) {
+        leadForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var name  = document.getElementById('lname').value.trim();
+            var email = document.getElementById('lemail').value.trim();
+
+            if (!name || !email) {
+                leadStatus.textContent = 'Please fill in both fields.';
+                leadStatus.className = 'form-status error';
+                return;
+            }
+
+            var btn = leadForm.querySelector('.btn-submit');
+            btn.textContent = 'One moment...';
+            btn.disabled = true;
+
+            /* If Formspree not configured, go straight to download */
+            if (FORMSPREE_ID === 'REPLACE_WITH_LEAD_FORM_ID') {
+                showDownload();
+                return;
+            }
+
+            /* Submit to Formspree, then show download */
+            fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+                method: 'POST',
+                body: new FormData(leadForm),
+                headers: { 'Accept': 'application/json' }
+            }).then(function () {
+                showDownload();
+            }).catch(function () {
+                /* Still show download even if email capture fails */
+                showDownload();
+            });
+        });
+    }
+
+}());
+</script>
+
+
+</body>
+</html>
