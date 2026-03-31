@@ -514,7 +514,7 @@ module.exports = async function handler(req, res) {
         'HTTP-Referer': req.headers?.host ? `https://${req.headers.host}` : 'http://localhost:3000',
       },
       body: JSON.stringify({
-        model: 'anthropic/claude-sonnet-4.6',
+        model: 'anthropic/claude-sonnet-4-5',
         messages,
         tools,
         max_tokens: 4096,
